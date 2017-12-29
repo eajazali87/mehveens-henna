@@ -1,17 +1,23 @@
 import React from 'react';
-import ImageGallery from 'react-image-gallery';
-import "../../../node_modules/react-image-gallery/styles/scss/image-gallery.scss"
+import { Gallery, Image, Overlay } from 'react-stylish-gallery'
+//import "../../../node_modules/react-image-gallery/styles/scss/image-gallery.scss"
 
 const samples = () => {
-  const sampleImages=[
-    {original: "https://image.ibb.co/mCZdnw/Mehendi_Designs_1.jpg", sizes: "10vw"},
-    {original: "https://image.ibb.co/mCZdnw/Mehendi_Designs_1.jpg"},
-]
+ 
     return (
       <div className="container-fluid">
       <h1>samples</h1>
       <p>Some of our work...</p>
-      <ImageGallery items={sampleImages}/>
+      <Gallery withModal>
+   <Image src="/Users/umahaea/Documents/workspace/mehveens-henna/src/Assets/images/Mehendi-Designs-1.jpg" alt="Image 1" size ="3" theme={{ padding: '5px' }}>
+      <Overlay title="My first image" animationDuration="0.1"/>
+   </Image>
+    
+
+  <Image src="https://upload.wikimedia.org/wikipedia/commons/4/49/Testing22222.jpg" alt="Image 2" size ="3">
+    <Overlay title="My second image"/>
+    </Image>
+    </Gallery>      
       </div>
     );
 }

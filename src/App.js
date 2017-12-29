@@ -11,14 +11,15 @@ import HomePage from './components/pages/homePage';
 import Products from './components/pages/products';
 import Contact from './components/pages/contact';
 import Samples from './components/pages/samples';
-import {Footer} from '@pearson-components/elements-sdk/build/dist.compounds';
+import {Footer} from '@pearson-components/elements-sdk/build/dist.elements-sdk';
+
 
 import './Assets/css/default.min.css';
 
 const App = () => {
   const footerArrayObjects = [{text: 'First Link', href: 'www.yahoo.com'},{text: 'Second Link', href: 'www.facebook.com'}]
   const copyRights = "eajaz"
-
+  
     return (
       <Router>
       <div className="App">
@@ -30,7 +31,6 @@ const App = () => {
       <Footer links={footerArrayObjects} copyrightText={copyRights} singlePageStick/>
       </div>
       </Router>
-
     );
 }
 
